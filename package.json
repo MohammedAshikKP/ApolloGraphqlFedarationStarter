@@ -1,0 +1,23 @@
+{
+  "name": "resolver-ex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gateway.js",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently -k npm:server:*",
+    "server:gateway": "nodemon --watch '*.js' --exec 'node' gateway.js",
+    "server:user": "nodemon --watch '*.js' --exec 'node' user.js",
+    "server:tweet": "nodemon --watch '*.js' --exec 'node' tweet.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/federation": "^0.28.0",
+    "@apollo/gateway": "^0.36.0",
+    "apollo-server": "^3.1.2",
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.1.0"
+  }
+}
